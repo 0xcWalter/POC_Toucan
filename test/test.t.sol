@@ -3,8 +3,13 @@ pragma solidity 0.8.14;
 import {Test, console} from "forge-std/Test.sol";
 import {CustomToucanCarbonOffsets} from "../src/CustomToucanCarbonOffsets.sol";
 
+/*
+    before running the POC,see the summary of what i have changed in the ToucanCarbonOffsets contract to
+    understand in a better way the problem.
+*/
 
-contract CounterTest is Test {
+
+contract POC is Test {
     Proxy proxy = Proxy(0x098bcd2dD9Ed7897F5a303079012EEccBBb87aA0); // address of one of the UpgradeableBeacon proxies with implementation without gaps(on celo)
 
     function test_one()external {
